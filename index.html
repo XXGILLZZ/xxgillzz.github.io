@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="fx"></canvas>
+  <div class="bg-hearts"></div>
+
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">💘 For My Shona</div>
+      <button id="musicBtn" class="ghost" type="button">🔊 Music: Off</button>
+    </header>
+
+    <!-- SCREEN 1 -->
+    <section class="card" id="screenIntro">
+      <h1 class="title">Hey my love ❤️</h1>
+      <p class="subtitle">
+        You really thought I wasn't gonna ask you or anything? I've been making this for a bit now hehehe mwahhh
+      </p>
+
+      <div class="row">
+        <button class="btn primary" id="beginBtn">Press kardo janab ✨</button>
+        <button class="btn" id="softPopBtn">Send a kiss 💋</button>
+      </div>
+
+      <div class="hint" id="introHint" hidden>
+        MWAHHHHHHHHHHHH I LOVE YOU MERI SHONA MONA JAANU 💘
+      </div>
+    </section>
+
+    <!-- SCREEN 2 -->
+    <section class="card" id="screenStory" hidden>
+      <h2 class="title">Top favourite picssss 💞</h2>
+      <p class="subtitle">
+        I promise I’ll always find new ways to love you 💘
+      </p>
+
+      <div class="gallery">
+  <button class="photoCard" type="button" data-full="images/pic1.jpeg">
+    <img src="images/pic1.jpeg" alt="Us photo 1">
+  </button>
+
+  <button class="photoCard" type="button" data-full="images/pic2.jpeg">
+    <img src="images/pic2.jpeg" alt="Us photo 2">
+  </button>
+
+  <button class="photoCard" type="button" data-full="images/pic3.jpg">
+    <img src="images/pic3.jpg" alt="Us photo 3">
+  </button>
+</div>
+
+
+      <div class="letter">
+        <button class="btn primary" id="openLetterBtn">Open letter ✉️</button>
+        <div id="letterBody" hidden>
+          <pre class="loveText" id="loveText"></pre>
+<button class="btn primary" id="toQuestionBtn" type="button">One last thing…</button>
+        </div>
+      </div>
+
+      <button class="btn" id="backHomeBtn">Back</button>
+    </section>
+
+    <!-- SCREEN 3 -->
+    <section class="card" id="screenAsk" hidden>
+      <h2 class="title">One last thing hehe 💖</h2>
+      <p class="bigQuestion">Will you be my Valentine?</p>
+
+      <div class="arena" id="arena">
+        <button class="btn yes" id="yesBtn">YES 🥰</button>
+        <button class="btn no" id="noBtn">No 🙃</button>
+      </div>
+
+      <div id="noCounter" class="small muted">No attempts: 0</div>
+      <div class="secret" id="secretBox" hidden>
+        <div id="loveNote"></div>
+      </div>
+    </section>
+
+    <!-- SCREEN 4 -->
+    <section class="card" id="screenYes" hidden>
+      <h2 class="title">THATS WHAT I THOUGHT 😭💘</h2>
+      <p id="finalLine"></p>
+      <button class="btn primary" id="replayBtn">Replay 🔁</button>
+    </section>
+
+    <footer class="foot">Just for my Shona 💘</footer>
+
+    <audio id="bgm" loop>
+      <source src="Music.mp3" type="audio/mpeg">
+    </audio>
+  </main>
+
+ 
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

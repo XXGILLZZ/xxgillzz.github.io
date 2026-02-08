@@ -1,0 +1,183 @@
+:root{
+  --bg1:#0b1020;
+  --bg2:#160b1f;
+  --text:#f3f6ff;
+  --muted:#c9d2ffb3;
+  --accent:#ff4d8d;
+}
+
+*{box-sizing:border-box}
+
+html, body{
+  height:100%;
+}
+
+body{
+  margin:0;
+  font-family:system-ui;
+  color:var(--text);
+  background:linear-gradient(160deg,var(--bg1),var(--bg2));
+}
+
+/* Center the whole app */
+.shell{
+  min-height: 100vh;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center */
+  gap: 16px;
+}
+
+/* Keep the header aligned but centered container */
+.topbar{
+  width: 100%;
+  max-width: 720px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Center each “screen” card */
+.card{
+  width: 100%;
+  max-width: 720px;
+  background:#121a33cc;
+  border-radius:20px;
+  padding:24px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Typography */
+.title{font-size:32px;margin:0 0 10px}
+.subtitle{color:var(--muted); margin:0 0 10px}
+
+/* Center rows of buttons */
+.row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.btn{
+  padding:12px 16px;
+  border-radius:14px;
+  border:none;
+  background:#ffffff22;
+  color:white;
+  cursor:pointer;
+  font-weight:700;
+}
+.btn.primary{background:var(--accent)}
+.btn.yes{background:#34d399}
+.btn.no{background:#ffffff33}
+
+.hint{
+  margin: 12px auto 0;
+  padding:10px;
+  background:#ffffff22;
+  border-radius:14px;
+}
+
+/* Gallery centered and responsive */
+.gallery{
+  width: 100%;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap:16px;
+  margin: 16px auto;
+}
+
+.photoCard{
+  background:#00000033;
+  border-radius:16px;
+  padding:10px;
+  cursor:pointer;
+  text-align:center;
+}
+
+.photoCard img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.capTitle{margin-top:6px;font-weight:800}
+
+.letter{margin-top:16px}
+
+.loveText{
+  white-space:pre-wrap;
+  font-weight:700;
+  text-align: left;          /* letter reads nicer left-aligned */
+  margin: 12px 0;
+}
+
+/* Ask screen */
+.bigQuestion{font-size:26px;font-weight:900;margin: 10px 0 0}
+
+/* Center arena block */
+.arena{
+  position:relative;
+  width: 100%;
+  max-width: 360px;
+  height:200px;
+  background:#00000033;
+  border-radius:18px;
+  margin: 16px auto 10px;
+}
+
+.arena .btn{ position:absolute; }
+
+#yesBtn{left:20px;top:20px}
+#noBtn{left:160px;top:20px}
+
+.secret{
+  margin-top: 10px;
+  padding:10px;
+  background:#ff4d8d33;
+  border-radius:14px;
+}
+
+/* Footer */
+.foot{
+  width: 100%;
+  max-width: 720px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* Modal */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  display:grid;
+  place-items:center;
+  padding: 16px;
+}
+
+.modalCard{
+  background:#121a33;
+  padding:16px;
+  border-radius:20px;
+  width: min(900px, 100%);
+}
+
+.modalCard img{
+  width: 100%;
+  max-height:70vh;
+  object-fit: contain;
+  border-radius:16px;
+}
